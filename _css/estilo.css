@@ -1,0 +1,76 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image:url('../_imagens/fundo1.jpg') ;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    height: 100vh;
+}
+
+.verifica {
+    margin-top:10vh;
+    background:white;
+    color:#fff;
+    border-radius: 20px 0px 20px 0px;
+    }
+ .titulo{
+     color: black;
+     font-size: 2em;
+     font-weight: 900;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     padding-top: 20px;
+     margin-bottom: 30px;
+ }
+ #nome, #email, #name, #cpf, #team_id, #nickname{
+     border: none;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.474);
+     width: 100%;
+     
+ }
+ 
+ .info{
+     color: rgba(0, 0, 0, 0.597);
+ }
+ .separa{
+     margin-bottom: 30px;
+ }
+ .idade{
+     color:black
+ }
+ .btnEnviar{
+     background-image: linear-gradient(to right  , rgb(0, 81, 255) , rgb(0, 128, 167));
+     color: white;
+     font-size: 1.5em;
+     font-weight: 600;
+     width: 40%;
+     height: 50px;
+     border-radius: 20px 0px 20px 0px;
+
+ }
+
+ #ir{
+    color: black;
+    font: bold;
+    margin-bottom: 10px;
+}
+#ir a:hover{
+    color: white;
+}
+.btnEnviar:hover{
+    background-image: linear-gradient(to right  , rgb(0, 255, 72) , rgb(0, 167, 131));
+}
+#day, #month, #year{
+    width: 20%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.474);
+}
+#year{
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.474);
+}
+.opcao{
+    color: black;
+    text-decoration: bold;
+    margin-left: 10px;
+}

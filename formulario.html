@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+
+    <!-- Adiciona o bootstrap atraves da chamada por link externo do Bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="_imagens/bola.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="_css/estilo.css">
+    
+    <script src="_javascript/cadastro.js"></script>
+   
+</head>
+<body>
+   <div class="tudo pb-5 container container-fluid">
+      
+           <div class="row justify-content-center">
+
+               <div class="col-md-6 col-sm-12 verifica ml-3 mr-3">
+
+                <h3 class="titulo text-center"><b>FORMULÁRIO</b> </h3>
+
+                <form action=""  class="container">
+
+                  <label for="name" class=" d-block">
+                    <span class="info"><b>Nome:</b></span><br>
+                    <input id="name" type="text" maxlength="80" minlength="10" required>
+                  </label> 
+
+                  <label for="nickname" class=" d-block">
+                    <span class="info"><b>Apelido:</b></span><br>
+                    <input id="nickname" type="text" maxlength="20" minlength="2" required>
+                  </label>
+
+                  <label for="day" class="">
+                    <span class="info"><b>Data de Nascimento:</b></span><br>
+                    <input id="day" type="text" maxlength="2" minlength="1"   placeholder="Dia" required onkeypress="return somenteNumeros(event)" ><span class="info" > /</span>
+                    <input id="month" type="text" maxlength="2" minlength="1"  placeholder="Mês" required onkeypress="return somenteNumeros(event)"><span class="info" > /</span>
+                    <input id="year" type="text" maxlength="4" minlength="4"   placeholder="Ano" required onkeypress="return somenteNumeros(event)">
+                  </label>  
+
+                  <label for="cpf" class=" d-block">
+                    <span class="info"><b>CPF:</b></span><br>
+                    <input id="cpf" type="text" maxlength="14" required  onblur="formataCPF(this)" onkeypress="return somenteNumeros(event)">
+                  </label>  
+                  
+                  <label for="tean_id" class=" d-block">
+                    <span class="info"><b>Time do Coração:</b></span><br>
+                    <select id="team_id" maxlength="20">
+                      <option value="São Paulo">São Paulo</option>
+                      <option value="Palmeiras">Palmeiras</option>
+                      <option value="Internacional">Internacional</option>
+                      <option value="Corinthians">Corinthians</option>
+                      <option value="Real Madrid">Real MAdrid</option>
+                      <option value="Paris Saint German">Paris Saint German</option>
+                      <option value="Ibis">Ibis</option>
+                      <option value="Riacho F.C">Riacho F.C</option>
+                      <option value="Barcelona">Barcelona</option>
+                      <option value="Cruzeiro">Cruzeiro</option>
+                      <option value="Gremio">Gremio</option>
+                      <option value="Flamengo">Flamengo</option>
+                      <option value="Vasco">Vasco</option>
+                      <option value="Brasil">Brasil</option>
+                      <option value="Outros">Outros</option>
+                    </select>
+                  </label>  
+                  
+                  <label for="" class=" d-block">
+                    <span class="info"><b>Esportes de Interesse:</b></span><br>
+                    <input type="checkbox" class="sport" id="1" ><span class="opcao">Futebol</span> <br>
+                    <input type="checkbox" class="sport" id="2"><span class="opcao">Vôlei</span><br>
+                    <input type="checkbox" class="sport" id="3"><span class="opcao">Basquete</span><br>
+                    <input type="checkbox" class="sport" id="4"><span class="opcao">Futsal</span><br>
+                    <input type="checkbox" class="sport" id="5"><span class="opcao">Automobilismo</span><br>
+                    <input type="checkbox" class="sport" id="6"><span class="opcao">Artes Marciais</span><br>
+                    <input type="checkbox" class="sport" id="7"><span class="opcao">Natação</span><br>
+                  </label>
+                  <br>
+                  <div id="mensagem" class="text-danger"> </div>
+                  <br>
+                  
+                 
+                  <div class="text-center mb-3">
+                    <button type="button" value="Enviar" class="btnEnviar" class="separa" onclick="valida()">Enviar</button>
+                    <br>
+                    
+                </div>
+
+                </form>
+
+               </div>
+           </div>
+       
+   </div>
+    
+</body>
+
+
+<!-- Links Externos para a animação de botão com bootstrap, javascript e ajax--> 
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>
